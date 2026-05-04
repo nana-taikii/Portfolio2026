@@ -38,11 +38,11 @@ const Header = () => {
           <img src={FlowerImg} className="c-flower" />
         </li>
         <li>
-          <a href="#projects">projects</a>{" "}
+          <a href="#projects">projects</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
         <li>
-          <a href="#arts">arts</a> <img src={FlowerImg} className="c-flower" />
+          <a href="#arts">arts</a><img src={FlowerImg} className="c-flower" />
         </li>
         <li>
           <a href="#contact" className="c-btn-pink">
