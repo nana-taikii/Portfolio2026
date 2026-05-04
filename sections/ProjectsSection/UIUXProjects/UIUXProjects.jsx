@@ -167,6 +167,8 @@ const UIUXProjects = () => {
               src={project.img} 
               alt={project.title} 
               className='uiuxprojects' 
+              loading="eager"
+              decoding="sync" 
             />
             <div className={hoveredProject === project.id ? 'c-projects-content__projects-desc active' : 'c-projects-content__projects-desc'}>
               <p>{project.title}</p>
