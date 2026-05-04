@@ -1,0 +1,521 @@
+.c-arts-section__wrapper{
+    width:100%;
+    position:relative;
+}
+.c-arts__bg{
+    width:100%;
+}
+
+.c-arts-section__wrapper h2{
+    color:var(--text-lightViolet);
+    font-size:60px;
+    position:absolute;
+    top:70px;
+    left:100px;
+}
+
+@media screen and (min-width:1450px){
+  .c-arts-section__wrapper h2{
+    top:120px;
+    left:150px;
+  }
+}
+
+@media screen and (max-width:1000px){
+    .c-arts-section__wrapper h2{
+  
+    top:30px;
+    left:50px;
+}
+
+}
+
+@media screen and (max-width:767px){
+     .c-arts-section__wrapper h2{
+        font-size:40px;
+     }
+}
+
+@media screen and (max-width:600px){
+      .c-arts-section__wrapper h2{
+       top:20px;
+       left:20px;
+     }
+}
+@media screen and (max-width:500px){
+      .c-arts-section__wrapper h2{
+       top:0px;
+       left:20px;
+     }
+}
+/*ARTS MODAL*/
+
+/* ── Root & Layout ─────────────────────────── */
+
+.c-arts__root {
+ 
+  min-height: 100vh;
+  padding: 0;
+}
+
+.c-arts__flex-container {
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.c-arts__flex-row {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* Panel styles */
+.c-arts__flex-panel {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+  max-height: 360px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.c-arts__flex-panel--tall {
+  max-height: 360px;
+}
+
+.c-arts__flex-panel:hover {
+  /* transform: scale(1.02); */
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.c-arts__flex-panel-inner {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+}
+
+.c-arts__flex-panel-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+  padding: 18px 10px 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.c-arts__flex-panel:hover .c-arts__flex-panel-label {
+  opacity: 1;
+}
+
+.c-arts__flex-panel-label p {
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom:10px;
+
+}
+
+/* Responsive flex row configurations */
+@media (min-width: 400px) {
+  .c-arts__flex-row--1,
+  .c-arts__flex-row--4,
+  .c-arts__flex-row--6 {
+    flex-wrap: nowrap;
+  }
+  .c-arts__flex-row--2,
+  .c-arts__flex-row--3,
+  .c-arts__flex-row--5 {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 399px) {
+  .c-arts__flex-row {
+    flex-direction: column;
+  }
+  .c-arts__flex-panel {
+    width: 100%;
+  }
+}
+
+/* ── Modal ──────────────────────────────────── */
+
+.c-arts__modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 25, 0.88);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: c-arts-fadeIn 0.2s ease;
+  z-index:9999;
+}
+
+@keyframes c-arts-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.c-arts__modal-card {
+  background: #1c1820;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 680px;
+  width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  animation: c-arts-slideUp 0.25s ease;
+}
+
+@keyframes c-arts-slideUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.c-arts__modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 8px;
+  flex-shrink: 0;
+}
+
+.c-arts__modal-counter {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.c-arts__modal-stage {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.c-arts__modal-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.c-arts__modal-slide--enter-right {
+  animation: c-arts-slideInRight 0.25s ease;
+}
+
+.c-arts__modal-slide--enter-left {
+  animation: c-arts-slideInLeft 0.25s ease;
+}
+
+@keyframes c-arts-slideInRight {
+  from { transform: translateX(40px);  opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes c-arts-slideInLeft {
+  from { transform: translateX(-40px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+.c-arts__modal-info {
+  padding: 12px 16px 4px;
+  flex-shrink: 0;
+}
+
+.c-arts__modal-info p {
+  margin: 0;
+}
+
+.c-arts__modal-title {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 2px !important;
+}
+
+.c-arts__modal-desc {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  letter-spacing:0.06em;
+  margin-top:5px;
+}
+
+.c-arts__modal-spacer {
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* ── Nav Buttons ────────────────────────────── */
+
+.c-arts__nav-btn {
+  background: rgba(15, 15, 15, 0.52);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.c-arts__nav-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.c-arts__nav-btn--prev { left: 12px; }
+.c-arts__nav-btn--next { right: 12px; }
+
+.c-arts__close-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.15s;
+}
+
+.c-arts__close-btn:hover {
+  color: white;
+}
+
+/* ── Dots ───────────────────────────────────── */
+
+.c-arts__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0 4px;
+  flex-shrink: 0;
+}
+
+.c-arts__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.c-arts__dot--active {
+  background: white;
+  transform: scale(1.3);
+}
+
+/* ── Thumbnail Strip ────────────────────────── */
+
+.c-arts__thumb-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px 16px;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+
+.c-arts__thumb-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.c-arts__thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  flex-shrink: 0;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.c-arts__thumb--active {
+  border-color: #c8a0d8;
+  transform: scale(1.1);
+}
+
+.c-arts__thumb:hover:not(.c-arts__thumb--active) {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.c-arts__thumb-inner {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ── Media (img / svg) ──────────────────────── */
+
+.c-arts__media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius:5px;
+}
+
+.c-arts__media-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c-arts__modal-media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.c-arts__flex-panel,
+.c-arts__modal-slide,
+.c-arts__thumb {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.c-arts__modal-slide--enter-right,
+.c-arts__modal-slide--enter-left {
+  will-change: transform, opacity;
+}
+
+.c-arts__media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Force GPU acceleration and instant rendering */
+.c-arts__modal-bg,
+.c-arts__modal-card,
+.c-arts__modal-stage,
+.c-arts__modal-slide {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Ensure modal renders instantly */
+.c-arts__modal-bg {
+  will-change: auto;
+}
+
+.c-arts__modal-card {
+  will-change: transform, opacity;
+}
+
+/* Optimize rendering performance */
+.c-arts__flex-container,
+.c-arts__flex-row,
+.c-arts__flex-panel {
+  contain: layout style paint;
+}
+
+/* Prevent layout shifts */
+.c-arts__modal-media {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Closing animations for modal */
+.c-arts__modal-bg--closing {
+  animation: c-arts-fadeOut 0.25s ease forwards;
+  pointer-events: none;
+}
+
+.c-arts__modal-card--closing {
+  animation: c-arts-slideDown 0.25s ease forwards;
+}
+
+@keyframes c-arts-fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes c-arts-slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+}
+
+/* Ensure modal starts with proper state */
+.c-arts__modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 25, 0.88);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: c-arts-fadeIn 0.25s ease forwards;
+}
+
+.c-arts__modal-card {
+  background: #1c1820;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 680px;
+  width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  animation: c-arts-slideUp 0.25s ease forwards;
+}
+
+/* Remove duplicate animation declarations */
+.c-arts__modal-bg {
+  animation: c-arts-fadeIn 0.25s ease forwards;
+}
+
+.c-arts__modal-card {
+  animation: c-arts-slideUp 0.25s ease forwards;
+}
+
+/* Reverse animations for closing */
+.c-arts__modal-bg--closing {
+  animation: c-arts-fadeOut 0.25s ease forwards;
+  pointer-events: none;
+}
+
+.c-arts__modal-card--closing {
+  animation: c-arts-slideDown 0.25s ease forwards;
+}

@@ -1,0 +1,48 @@
+footer {
+  width: 100%;
+  background-color: #23252c;
+  padding: 30px;
+  text-align: center;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+footer p {
+  font-size: 24px;
+}
+footer a {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+footer a img{
+    height:30px;
+    transition:all 0.3s ease-in-out;
+}
+
+footer a:hover img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(17deg) brightness(109%) contrast(101%);
+}
+@media screen and (max-width: 767px) {
+  footer {
+    padding: 20px;
+  }
+  footer p {
+    font-size: 16px;
+  }
+  footer a {
+ 
+  right: 20px;
+ 
+ 
+}
+  footer a img {
+    height: 20px;
+  }
+}
