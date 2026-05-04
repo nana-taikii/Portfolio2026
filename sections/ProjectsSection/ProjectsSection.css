@@ -309,7 +309,9 @@
 }
 .uiuxprojects {
   width: 100%;
+  max-width:1300px;
   height:auto;
+  min-height:132px;
   display: block;
 }
 
