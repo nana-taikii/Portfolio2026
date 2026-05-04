@@ -13,7 +13,7 @@ const ContactSection = () => {
   return (
     <section id = 'contact' className = 'c-contact-section'>
       <img src={CloudBorder} className = 'c-cloud-border' />
-      {/* <div className = 'c-contact-section__desc'>
+      <div className = 'c-contact-section__desc'>
         <img src={CatBorgir} alt="CatBorgir" className = 'c-cat-borgir waffle-float' />
         <div className = 'c-contact-section__info'>
             <p className = 'c-contact-section__text'>
@@ -48,7 +48,7 @@ const ContactSection = () => {
                 <img src={FacebookIcon} alt="Facebook" />
             </a>
         </nav>
-      </div> */}
+      </div>
     </section>
   )
 }

@@ -11,6 +11,7 @@ const Home = () => {
   return (
     <>
     <HeroSection />
+     <AboutSection />
       {/* <HeroSection />
 
       <AboutSection />
