@@ -47,7 +47,7 @@ const ServicesSection = () => {
             services
           </p>
         </hgroup>
-        <ul className = 'reveal'>
+        {/* <ul className = 'reveal'>
           {services.map((service) => (
             <li key={service.id} >
               <div>
@@ -69,7 +69,7 @@ const ServicesSection = () => {
               <p>{service.description}</p>
             </li>
           ))}
-        </ul>
+        </ul> */}
         <LinkButton
             href="#contact" 
             color="dark" 
