@@ -18,10 +18,11 @@ const Home = () => {
         <p>wawers</p>
        
       </div>
-        <ArtsSection />
+        {/* <ArtsSection /> */}
       {/* <ProjectsSection />
       <ArtsSection />
       <ContactSection /> */}
+      <ContactSection /> 
     </>
   );
 };
