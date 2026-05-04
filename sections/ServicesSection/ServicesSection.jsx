@@ -50,9 +50,9 @@ const ServicesSection = () => {
         <ul className = 'reveal'>
           {services.map((service) => (
             <li key={service.id} >
-              <div>
-                {/* <img src={service.icon} alt={service.service} /> */}
-                {/* <p
+              {/* <div>
+                <img src={service.icon} alt={service.service} />
+                <p
                   className = 'c-services-section__label'
                   style={{
                     color:
@@ -64,8 +64,8 @@ const ServicesSection = () => {
                   }}
                 >
                   {service.service}
-                </p> */}
-              </div>
+                </p>
+              </div> */}
               <p>{service.description}</p>
             </li>
           ))}
