@@ -181,12 +181,13 @@ const UIUXProjects = () => {
       </ul>
      
      {openModal && (
-       <ProjectModal
-        key={selectedProject?.id || "modal"}
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-        content={<UIUXProjectsContent project = {selectedProject}/>}
-        />
+      //  <ProjectModal
+      //   key={selectedProject?.id || "modal"}
+      //   openModal={openModal}
+      //   setOpenModal={setOpenModal}
+      //   content={<UIUXProjectsContent project = {selectedProject}/>}
+      //   />
+      <p>wawers</p>
      )}
      
     </div>
