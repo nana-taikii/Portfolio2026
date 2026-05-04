@@ -168,14 +168,14 @@ const UIUXProjects = () => {
               alt={project.title} 
               className='uiuxprojects' 
             />
-            <div className={hoveredProject === project.id ? 'c-projects-content__projects-desc active' : 'c-projects-content__projects-desc'}>
+            {/* <div className={hoveredProject === project.id ? 'c-projects-content__projects-desc active' : 'c-projects-content__projects-desc'}>
               <p>{project.title}</p>
               <ul>
                 {project.tools.map((tool) => (
                   <li key={tool.id}>{tool.toolName}</li> 
                 ))}
               </ul>
-            </div>
+            </div> */}
           </li>
         ))}
       </ul>
