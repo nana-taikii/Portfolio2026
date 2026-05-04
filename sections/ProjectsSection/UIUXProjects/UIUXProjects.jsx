@@ -152,7 +152,7 @@ const UIUXProjects = () => {
 
   return (
     <div className='c-projects-content__wrapper'>
-      <ul className='c-projects-content__wrapper__ul'>
+      {/* <ul className='c-projects-content__wrapper__ul'>
         {UIUXProjects.map((project) => (
           <li 
             key={project.id}
@@ -178,16 +178,16 @@ const UIUXProjects = () => {
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
      
      {openModal && (
-      //  <ProjectModal
-      //   key={selectedProject?.id || "modal"}
-      //   openModal={openModal}
-      //   setOpenModal={setOpenModal}
-      //   content={<UIUXProjectsContent project = {selectedProject}/>}
-      //   />
-      <p>wawers</p>
+       <ProjectModal
+        key={selectedProject?.id || "modal"}
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        content={<UIUXProjectsContent project = {selectedProject}/>}
+        />
+    
      )}
      
     </div>
