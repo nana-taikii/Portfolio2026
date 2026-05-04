@@ -253,7 +253,8 @@
   width: 100%;
   margin-top: 40px;
   position: relative;
-  height:100vh;
+  height:100%;
+  min-height:100vh;
 }
 
 .c-projects-content__wrapper .c-projects-content__wrapper__ul {
