@@ -63,6 +63,10 @@
   justify-content: center;
   width: 100%;
 }
+.c-srvices-section__desc ul li {
+  min-height:152px;
+  height:100%;
+}
 .c-srvices-section__desc ul li div {
   display: flex;
   flex-direction: column;
