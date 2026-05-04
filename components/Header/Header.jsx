@@ -7,13 +7,13 @@ import "./Header.css";
 
 const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
-  const [currentSection, setCurrentSection] = useState(null);
 
-  const handleToggleNavBar = () => {
-    setToggleOverlay(!toggleOverlay);
-  };
-
-  const handleCloseNavbar = () => {
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
     setToggleOverlay(false);
   };
 
@@ -21,61 +21,59 @@ const Header = () => {
     <header>
       <ul className="c-header">
         <li>
-          <a href="#about">about me</a>
+          <a href="#about" onClick={(e) => handleNavClick(e, "about")}>about me</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
         <li>
-          <a href="#services">services</a>
+          <a href="#services" onClick={(e) => handleNavClick(e, "services")}>services</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
         <li>
-          <a href="#projects">projects</a>{" "}
+          <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>projects</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
         <li>
-          <a href="#arts">arts</a> <img src={FlowerImg} className="c-flower" />
+          <a href="#arts" onClick={(e) => handleNavClick(e, "arts")}>arts</a>
+          <img src={FlowerImg} className="c-flower" />
         </li>
         <li>
-          <a href="#contact" className="c-btn-pink">
+          <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className="c-btn-pink">
             let's talk
           </a>
         </li>
       </ul>
+
       <div className="c-header-sp">
         {!toggleOverlay && (
           <img
             src={IconMenu}
             alt="Menu"
             className="c-header-sp__menu"
-            onClick={() => handleToggleNavBar()}
+            onClick={() => setToggleOverlay(true)}
           />
         )}
-        <div
-          className={
-            toggleOverlay ? "c-header-overlay active" : "c-header-overlay"
-          }
-        >
+        <div className={toggleOverlay ? "c-header-overlay active" : "c-header-overlay"}>
           <img
             src={IconClose}
             alt="Close"
             className="c-header-sp__close"
-            onClick={() => handleCloseNavbar()}
+            onClick={() => setToggleOverlay(false)}
           />
           <ul className="c-header-nav-sp">
             <li>
-              <a href="#about">about me</a>
+              <a href="#about" onClick={(e) => handleNavClick(e, "about")}>about me</a>
             </li>
             <li>
-              <a href="#services">services</a>
+              <a href="#services" onClick={(e) => handleNavClick(e, "services")}>services</a>
             </li>
             <li>
-              <a href="#projects">projects</a>
+              <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>projects</a>
             </li>
             <li>
-              <a href="#arts">arts</a>
+              <a href="#arts" onClick={(e) => handleNavClick(e, "arts")}>arts</a>
             </li>
             <li>
-              <a href="#contact" className="c-btn-pink">
+              <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className="c-btn-pink">
                 let's talk
               </a>
             </li>
