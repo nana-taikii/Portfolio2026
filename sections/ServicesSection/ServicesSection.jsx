@@ -51,7 +51,7 @@ const ServicesSection = () => {
           {services.map((service) => (
             <li key={service.id} >
               <div>
-                <img src={service.icon} alt={service.service} />
+                {/* <img src={service.icon} alt={service.service} /> */}
                 {/* <p
                   className = 'c-services-section__label'
                   style={{
