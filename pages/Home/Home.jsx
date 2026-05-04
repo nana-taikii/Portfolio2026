@@ -10,6 +10,7 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
+    <HeroSection />
       {/* <HeroSection />
 
       <AboutSection />
@@ -18,7 +19,7 @@ const Home = () => {
       {/* <AboutSection /> */}
       {/* <HeroSection />
       <AboutSection /> */}
-      <ServicesSection /> 
+      {/* <ServicesSection />  */}
       {/* <ServicesSection /> */}
       {/* <ProjectsSection />
       <ArtsSection /> */}
