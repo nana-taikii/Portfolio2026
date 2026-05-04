@@ -9,16 +9,17 @@ const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
   const [currentSection, setCurrentSection] = useState(null);
 
-  const handleNavClick = (e, sectionId) => {
-    e.preventDefault();
-    setToggleOverlay(false);
-    setTimeout(() => {
-      document
-        .getElementById(sectionId)
-        ?.scrollIntoView({ behavior: "smooth" });
-    }, 300); // matches your 0.3s CSS transition
-  };
-
+ const handleNavClick = (e, sectionId) => {
+  e.preventDefault();
+  setToggleOverlay(false);
+  setTimeout(() => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const y = section.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }, 300);
+};
   const handleToggleNavBar = () => {
     setToggleOverlay(!toggleOverlay);
   };
