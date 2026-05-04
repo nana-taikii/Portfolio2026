@@ -1,13 +1,15 @@
 
 #contact{
-  min-height:100vh;
+  
+  
   position:relative;
+  min-height:500px;
+ 
 }
 .c-contact-section {
   width: 100%;
-  padding: 0px 0px 0px 0px;
-  position:absolute;
-  bottom:0px;
+  padding: 200px 0px 0px 0px;
+ min-height:500px;
   
 }
 .c-cloud-border {
