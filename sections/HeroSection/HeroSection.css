@@ -161,14 +161,39 @@
 }
 
 @media screen and (max-width: 767px) {
-  .c-hero-section {
-    min-height: auto;
+  .c-hero-section{
+    height:100vh;
   }
-  .c-hero-section {
-    height: 100%;
-  }
-
   .c-hero-section__container {
-    margin-top: 50px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+   
+  }
+  
+  .c-hero-section__desc {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .c-hero-section__desc h1 {
+    font-size: 30px;
+  }
+  
+  .c-hero-section__desc p {
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  /* Add this - makes image stick to bottom */
+  .c-hero-section__img {
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+  
   }
 }

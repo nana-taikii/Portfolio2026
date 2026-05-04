@@ -135,9 +135,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .c-projects-section__wrapper nav {
-
-  }
+ 
   .c-project-section__btn {
     min-width: 220px;
   }
@@ -155,9 +153,13 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     padding-bottom: 5px;
+   
   }
+  
   .projects-section__wrapper nav {
     margin: 0px auto;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .c-projects-section {
     padding: 80px 16px;
@@ -196,9 +198,7 @@
   .c-projects-section__wrapper {
     gap: 30px;
   }
-  .c-projects-section__wrapper nav{
-    justify-content: center;
-  }
+  
 }
 
 /*MODAL*/
@@ -347,9 +347,22 @@
 .UIUXImg__wrapper {
   background-color: var(--bg-white);
   margin-top: 20px;
-  height: 100vh;
+  height: auto;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.c-modal-content {
+  transition: opacity 0.2s ease;
 }
 
+.c-modal-content.loading {
+  opacity: 0;
+}
+
+.c-modal-content.loaded {
+  opacity: 1;
+}
 @media screen and (max-width: 767px) {
   .c-projects-content__wrapper {
     margin-top: 0px;
