@@ -140,8 +140,11 @@
     .c-srvices-section__desc ul li {
     width:100%;
   
-    height:fit-content;
+    height:204px;
     
     min-height:130px;
   }
+     .c-srvices-section__desc ul li:nth-child(1){
+      height:185px;
+     } 
 }
