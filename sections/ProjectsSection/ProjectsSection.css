@@ -250,20 +250,23 @@
 .c-projects-content__wrapper {
   width: 100%;
   margin-top: 40px;
-  position:relative;
-  min-height:1000px;
+  position: relative;
+  /* Use contain-intrinsic-size to hint at content height */
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
 }
+
 .c-projects-content__wrapper .c-projects-content__wrapper__ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  height:100%;
-  min-height:1000px;
-  /* overflow: visible !important; */
   position: relative;
   z-index: 1;
+  /* Allow natural height */
+  height: auto;
+  min-height: auto;
 }
 .c-projects-content__wrapper .c-projects-content__wrapper__ul li {
   width: 100%;
