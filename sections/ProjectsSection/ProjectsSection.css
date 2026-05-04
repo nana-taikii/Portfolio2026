@@ -310,6 +310,8 @@
 }
 .uiuxprojects {
   width: 100%;
+  aspect-ratio: 25 / 9;
+  display: block;
 }
 
 .c-projects-content__projects-desc p,
