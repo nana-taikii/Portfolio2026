@@ -64,8 +64,9 @@
   width: 100%;
 }
 .c-srvices-section__desc ul li {
+  width:100%;
   min-height:152px;
-  height:100%;
+  height:auto;
 }
 .c-srvices-section__desc ul li div {
   display: flex;
