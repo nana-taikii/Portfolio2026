@@ -308,8 +308,8 @@
     visibility 0s linear 0s;
 }
 .uiuxprojects {
-  width: 100%;
-  aspect-ratio: 25 / 9;
+  width: auto;
+  height:467px;
   display: block;
 }
 
