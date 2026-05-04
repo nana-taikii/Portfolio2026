@@ -257,6 +257,7 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
+  height:100%;
 }
 .c-projects-content__wrapper .c-projects-content__wrapper__ul li {
   width: 100%;
