@@ -56,7 +56,7 @@ const Header = () => {
     <header>
       <ul className="c-header">
         <li onClick={(e) => handleNavClick(e, "home")}>
-          <a href="#home">about me</a>
+          <a href="#about">about me</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
         <li onClick={(e) => handleNavClick(e, "services")}>
