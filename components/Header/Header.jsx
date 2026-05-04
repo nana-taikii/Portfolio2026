@@ -70,9 +70,9 @@ const Header = () => {
             onClick={() => handleCloseNavbar()}
           />
           <ul className="c-header-nav-sp">
-            <li>
+            {/* <li>
               <a href="#about">about me</a>
-            </li>
+            </li> */}
             <li>
               <a href="#services">services</a>
             </li>
