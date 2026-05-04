@@ -1,6 +1,6 @@
 #contact {
   position: relative;
-  min-height: 100vh;
+ 
 }
 .c-contact-section {
   width: 100%;
@@ -184,7 +184,6 @@
     padding: 7px 15px;
     gap: 14px;
   }
-  #contact {
-    min-height: 50vh;
-  }
+  
+  
 }
