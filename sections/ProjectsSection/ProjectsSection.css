@@ -308,8 +308,8 @@
     visibility 0s linear 0s;
 }
 .uiuxprojects {
-  width: auto;
-  height:467px;
+  width: 100%;
+  height:auto;
   display: block;
 }
 
