@@ -99,7 +99,7 @@ const Header = () => {
           />
           <ul className="c-header-nav-sp">
             <li onClick={(e) => handleNavClick(e, "home")}>
-              <a href="#home">about me</a>
+              <a href="#about">about me</a>
             </li>
             <li onClick={(e) => handleNavClick(e, "services")}>
               <a href="#services">services</a>
