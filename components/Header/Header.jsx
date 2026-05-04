@@ -8,18 +8,15 @@ import "./Header.css";
 const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
   const [currentSection, setCurrentSection] = useState(null);
-
- const handleNavClick = (e, sectionId) => {
+  
+   const handleNavClick = (e, sectionId) => {
   e.preventDefault();
   setToggleOverlay(false);
   setTimeout(() => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const y = section.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  }, 300);
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  }, 300); // matches your 0.3s CSS transition
 };
+
   const handleToggleNavBar = () => {
     setToggleOverlay(!toggleOverlay);
   };
@@ -44,8 +41,7 @@ const Header = () => {
           <img src={FlowerImg} className="c-flower" />
         </li>
         <li>
-          <a href="#arts">arts</a>
-          <img src={FlowerImg} className="c-flower" />
+          <a href="#arts">arts</a><img src={FlowerImg} className="c-flower" />
         </li>
         <li>
           <a href="#contact" className="c-btn-pink">
@@ -75,37 +71,19 @@ const Header = () => {
           />
           <ul className="c-header-nav-sp">
             <li>
-              <a href="#about" onClick={(e) => handleNavClick(e, "about")}>
-                about me
-              </a>
+              <a href="#about">about me</a>
             </li>
             <li>
-              <a
-                href="#services"
-                onClick={(e) => handleNavClick(e, "services")}
-              >
-                services
-              </a>
+              <a href="#services">services</a>
             </li>
             <li>
-              <a
-                href="#projects"
-                onClick={(e) => handleNavClick(e, "projects")}
-              >
-                projects
-              </a>
+              <a href="#projects">projects</a>
             </li>
             <li>
-              <a href="#arts" onClick={(e) => handleNavClick(e, "arts")}>
-                arts
-              </a>
+              <a href="#arts">arts</a>
             </li>
             <li>
-              <a
-                href="#contact"
-                onClick={(e) => handleNavClick(e, "contact")}
-                className="c-btn-pink"
-              >
+              <a href="#contact" className="c-btn-pink">
                 let's talk
               </a>
             </li>
