@@ -1,6 +1,6 @@
 import React from 'react'
 import CloudBorder from "../../src/assets/img/img_cloud_border.svg"
-import CatBorgir from "../../src/assets/img/img_catborgir.svg"
+import CatBorgir from "../../src/assets/img/img_catBorgir.svg"
 import EnvelopeIcon from "../../src/assets/img/icon_envelope.svg"
 import PhoneIcon from "../../src/assets/img/icon_phone.svg"
 import InstagramIcon from "../../src/assets/img/icon_instagram.svg"
