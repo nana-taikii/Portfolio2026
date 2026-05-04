@@ -179,13 +179,16 @@ const UIUXProjects = () => {
           </li>
         ))}
       </ul>
-
-      <ProjectModal
+     
+     {openModal && (
+       <ProjectModal
         key={selectedProject?.id || "modal"}
         openModal={openModal}
         setOpenModal={setOpenModal}
         content={<UIUXProjectsContent project = {selectedProject}/>}
         />
+     )}
+     
     </div>
   );
 };
