@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import IconMenu from "../../src/assets/img/icon_menu.svg";
 import IconClose from "../../src/assets/img/icon_close.svg";
@@ -8,22 +8,40 @@ import "./Header.css";
 
 const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
-  const [currentSection, setCurrentSection] = useState(null);
-  
-  // Helper function to scroll to section with smooth behavior
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Update URL hash without causing jump
-      window.history.pushState(null, null, `#${sectionId}`);
-    }
-  };
+
+  // Handle hash change on page load and manually trigger scroll
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
+        }
+      }
+    };
+
+    // Handle initial load
+    handleHashChange();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
     setToggleOverlay(false);
-    scrollToSection(sectionId);
+    
+    // Small delay for Chrome mobile
+    setTimeout(() => {
+      window.location.hash = sectionId;
+    }, 50);
   };
 
   const handleToggleNavBar = () => {
