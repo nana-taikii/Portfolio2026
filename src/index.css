@@ -75,6 +75,7 @@ html {
   padding: 0;
   height: 100%;
   width: 100%;
+  min-height:100vh;
   overflow-x: hidden;
   font-family: "Buildings";
   font-weight: 400 !important;
@@ -104,6 +105,9 @@ a {
   animation: rotateFlowerRight 10s linear infinite;
 }
 
+main{
+  min-height:100vh;
+}
 /*============================================
 SCROLLBAR
 =============================================*/
