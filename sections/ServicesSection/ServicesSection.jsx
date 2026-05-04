@@ -65,8 +65,8 @@ const ServicesSection = () => {
                 >
                   {service.service}
                 </p>
-              </div> */}
-              <p>{service.description}</p>
+              </div>
+              <p>{service.description}</p> */}
             </li>
           ))}
         </ul>
