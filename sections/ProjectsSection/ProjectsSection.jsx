@@ -29,28 +29,8 @@ const ProjectsSection = () => {
         setIsTransitioning(false);
       }, 50);
     }, 150);
-  }; 
-
-  // In ProjectModal component and ArtsSection modal
-useEffect(() => {
-  if (openModal || selected) {
-    // Prevent scrolling on body when modal is open
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
-  } else {
-    // Restore scrolling when modal closes
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
-  }
-  
-  return () => {
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
   };
-}, [openModal, selected]);
+
   return (
     <section
       id = 'projects'
@@ -90,9 +70,9 @@ useEffect(() => {
         <div
           className={`c-projects-section__content ${isTransitioning ? "fade-out" : ""}`}
         >
-          {currentTab === "UI/UX Designs" && <UIUXProjects />}
+          {/* {currentTab === "UI/UX Designs" && <UIUXProjects />}
           {currentTab === "Web Dev" && <WebDevProjects />}
-          {currentTab === "Graphic Designs" && <GraphicsProjects />}
+          {currentTab === "Graphic Designs" && <GraphicsProjects />} */}
           {/* {currentTab === 'Arts' && (
                         <div>Arts content goes here</div>
                     )} */}

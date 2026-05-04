@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import IconMenu from "../../src/assets/img/icon_menu.svg";
 import IconClose from "../../src/assets/img/icon_close.svg";
@@ -8,52 +8,14 @@ import "./Header.css";
 
 const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
-
-  // Fix for Chrome mobile scrolling
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      // Temporarily disable any body scroll locks
-      const originalOverflow = document.body.style.overflow;
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      
-      // Force a reflow
-      void document.body.offsetHeight;
-      
-      // Get element position with offset for fixed header
-      const headerHeight = document.querySelector('header')?.offsetHeight || 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      // Use setTimeout to ensure Chrome mobile processes the scroll
-      setTimeout(() => {
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-        window.history.pushState(null, null, `#${sectionId}`);
-        
-        // Restore original overflow after scroll
-        setTimeout(() => {
-          document.body.style.overflow = originalOverflow;
-        }, 500);
-      }, 100);
-    }
-  };
-
+  const [currentSection, setCurrentSection] = useState(null);
+  
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
-    e.stopPropagation();
-    
-    // Close mobile menu
     setToggleOverlay(false);
-    
-    // Small delay for Chrome mobile
     setTimeout(() => {
-      scrollToSection(sectionId);
-    }, 50);
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    }, 300);
   };
 
   const handleToggleNavBar = () => {
@@ -67,23 +29,38 @@ const Header = () => {
   return (
     <header>
       <ul className="c-header">
-        <li onClick={(e) => handleNavClick(e, "home")}>
-          <a href="#home">about me</a>
+        <li onClick={(e) => {
+          e.preventDefault();
+          window.location.href = "#about";
+        }}>
+          <a href="#about">about me</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => handleNavClick(e, "services")}>
+        <li onClick={(e) => {
+          e.preventDefault();
+          window.location.href = "#services";
+        }}>
           <a href="#services">services</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => handleNavClick(e, "projects")}>
+        <li onClick={(e) => {
+          e.preventDefault();
+          window.location.href = "#projects";
+        }}>
           <a href="#projects">projects</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => handleNavClick(e, "arts")}>
+        <li onClick={(e) => {
+          e.preventDefault();
+          window.location.href = "#arts";
+        }}>
           <a href="#arts">arts</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => handleNavClick(e, "contact")}>
+        <li onClick={(e) => {
+          e.preventDefault();
+          window.location.href = "#contact";
+        }}>
           <a href="#contact" className="c-btn-pink">
             let's talk
           </a>
@@ -110,19 +87,39 @@ const Header = () => {
             onClick={() => handleCloseNavbar()}
           />
           <ul className="c-header-nav-sp">
-            <li onClick={(e) => handleNavClick(e, "home")}>
-              <a href="#home">about me</a>
+            <li onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#about";
+              handleCloseNavbar();
+            }}>
+              <a href="#about">about me</a>
             </li>
-            <li onClick={(e) => handleNavClick(e, "services")}>
+            <li onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#services";
+              handleCloseNavbar();
+            }}>
               <a href="#services">services</a>
             </li>
-            <li onClick={(e) => handleNavClick(e, "projects")}>
+            <li onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#projects";
+              handleCloseNavbar();
+            }}>
               <a href="#projects">projects</a>
             </li>
-            <li onClick={(e) => handleNavClick(e, "arts")}>
+            <li onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#arts";
+              handleCloseNavbar();
+            }}>
               <a href="#arts">arts</a>
             </li>
-            <li onClick={(e) => handleNavClick(e, "contact")}>
+            <li onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#contact";
+              handleCloseNavbar();
+            }}>
               <a href="#contact" className="c-btn-pink">
                 let's talk
               </a>

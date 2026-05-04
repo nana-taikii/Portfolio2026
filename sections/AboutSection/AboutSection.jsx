@@ -175,11 +175,11 @@ const AboutSection = () => {
         </div>
         </section>
 
-        <Modal
+        {/* <Modal
             openModal = {openModal}
             setOpenModal = {setOpenModal}
             content = {viewedFolder}
-        />
+        /> */}
     </>
    
   )
