@@ -257,7 +257,7 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  min-height:100vh;
+  height:0px;
   /* overflow: visible !important; */
   position: relative;
   z-index: 1;
@@ -266,6 +266,7 @@
   width: 100%;
   position: relative;
   user-select: none;
+  height:0px;
 }
 .c-projects-content__projects-desc {
   width: 100%;
