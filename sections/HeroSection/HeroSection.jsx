@@ -72,7 +72,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
             i’m an artist, UI/UX designer and a web developer. I enjoy blending
             creativity with functionality.
           </p>
-          <a href="#contact" className="c-btn-brown">
+          <a href="#projects" className="c-btn-brown">
             <span>see my work</span>
             <img src={FlowImg} alt="flower" className="c-flower" />
           </a>
