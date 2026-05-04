@@ -10,12 +10,20 @@ const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
   const [currentSection, setCurrentSection] = useState(null);
   
+  // Helper function to scroll to section with smooth behavior
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Update URL hash without causing jump
+      window.history.pushState(null, null, `#${sectionId}`);
+    }
+  };
+
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
     setToggleOverlay(false);
-    setTimeout(() => {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-    }, 300);
+    scrollToSection(sectionId);
   };
 
   const handleToggleNavBar = () => {
@@ -29,38 +37,23 @@ const Header = () => {
   return (
     <header>
       <ul className="c-header">
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#about";
-        }}>
-          <a href="#about">about me</a>
+        <li onClick={(e) => handleNavClick(e, "home")}>
+          <a href="#home">about me</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#services";
-        }}>
+        <li onClick={(e) => handleNavClick(e, "services")}>
           <a href="#services">services</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#projects";
-        }}>
+        <li onClick={(e) => handleNavClick(e, "projects")}>
           <a href="#projects">projects</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#arts";
-        }}>
+        <li onClick={(e) => handleNavClick(e, "arts")}>
           <a href="#arts">arts</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#contact";
-        }}>
+        <li onClick={(e) => handleNavClick(e, "contact")}>
           <a href="#contact" className="c-btn-pink">
             let's talk
           </a>
@@ -87,39 +80,19 @@ const Header = () => {
             onClick={() => handleCloseNavbar()}
           />
           <ul className="c-header-nav-sp">
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#about";
-              handleCloseNavbar();
-            }}>
-              <a href="#about">about me</a>
+            <li onClick={(e) => handleNavClick(e, "home")}>
+              <a href="#home">about me</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#services";
-              handleCloseNavbar();
-            }}>
+            <li onClick={(e) => handleNavClick(e, "services")}>
               <a href="#services">services</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#projects";
-              handleCloseNavbar();
-            }}>
+            <li onClick={(e) => handleNavClick(e, "projects")}>
               <a href="#projects">projects</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#arts";
-              handleCloseNavbar();
-            }}>
+            <li onClick={(e) => handleNavClick(e, "arts")}>
               <a href="#arts">arts</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#contact";
-              handleCloseNavbar();
-            }}>
+            <li onClick={(e) => handleNavClick(e, "contact")}>
               <a href="#contact" className="c-btn-pink">
                 let's talk
               </a>

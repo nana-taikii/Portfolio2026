@@ -14,14 +14,9 @@ const Home = () => {
 
       <AboutSection />
       <ServicesSection />
-      <div id = 'projects'>
-        <p>wawers</p>
-       
-      </div>
-        {/* <ArtsSection /> */}
-      {/* <ProjectsSection />
-      <ArtsSection />
-      <ContactSection /> */}
+      <ProjectsSection />
+        <ArtsSection />
+    
       <ContactSection /> 
     </>
   );
