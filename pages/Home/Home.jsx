@@ -16,6 +16,7 @@ const Home = () => {
       <ServicesSection />
       <div id = 'projects'>
         <p>wawers</p>
+        <ProjectsSection/>
       </div>
       {/* <ProjectsSection />
       <ArtsSection />
