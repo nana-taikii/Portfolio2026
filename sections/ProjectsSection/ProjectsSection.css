@@ -377,8 +377,11 @@
 }
 
 @media screen and (max-width:1300px){
+  .c-projects-content__projects-desc{
+    display:none !important;
+  }
   .c-projects-content__projects-desc.active{
-    display:none;
+    display:none !important;
   }
 }
 @media screen and (max-width: 767px) {
