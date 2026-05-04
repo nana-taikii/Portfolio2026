@@ -13,9 +13,9 @@ const ContactSection = () => {
   return (
     <section id = 'contact' className = 'c-contact-section'>
       <img src={CloudBorder} className = 'c-cloud-border' />
-      <div className = 'c-contact-section__desc'>
+      {/* <div className = 'c-contact-section__desc'>
         <img src={CatBorgir} alt="CatBorgir" className = 'c-cat-borgir waffle-float' />
-        {/* <div className = 'c-contact-section__info'>
+        <div className = 'c-contact-section__info'>
             <p className = 'c-contact-section__text'>
                do you need a UI/UX Designer or a front-end web developer? contact me! 
             </p>
@@ -47,8 +47,8 @@ const ContactSection = () => {
              <a href="https://www.facebook.com/donna.hope.117077" target = "_blank">
                 <img src={FacebookIcon} alt="Facebook" />
             </a>
-        </nav> */}
-      </div>
+        </nav>
+      </div> */}
     </section>
   )
 }
