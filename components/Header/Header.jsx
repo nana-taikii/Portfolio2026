@@ -9,20 +9,13 @@ import "./Header.css";
 const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
 
-const handleNavClick = (e, sectionId) => {
-  e.preventDefault();
-  setToggleOverlay(false);
-  setTimeout(() => {
-    if (sectionId === "contact" && window.innerWidth <= 768) {
-      window.scrollTo({ 
-        top: document.body.scrollHeight, 
-        behavior: "smooth" 
-      });
-    } else {
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    setToggleOverlay(false);
+    setTimeout(() => {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, 300);
-};
+    }, 300);
+  };
 
   const handleToggleNavBar = () => {
     setToggleOverlay(!toggleOverlay);

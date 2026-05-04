@@ -15,7 +15,7 @@ const Home = () => {
       <ServicesSection />
       <ProjectsSection />
       <ArtsSection />
-      <ContactSection />
+     
     </>
   );
 };

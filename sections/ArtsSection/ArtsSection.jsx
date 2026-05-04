@@ -19,6 +19,7 @@ import Art13 from "../../src/assets/img/img_art13.png";
 import Art14 from "../../src/assets/img/img_art14.png";
 import Art15 from "../../src/assets/img/img_art15.png";
 import Art16 from "../../src/assets/img/img_art17.png";
+import ContactSection from "../ContactSection/ContactSection";
 
 // Preload all images for instant modal opening
 const preloadImages = () => {
@@ -277,6 +278,8 @@ const ArtsSection = () => {
           </div>
         )}
       </div>
+
+      <ContactSection/>
     </section>
   );
 };
