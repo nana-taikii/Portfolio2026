@@ -11,14 +11,14 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
-    <div id = 'home'>
+    <a name = '#home'>
         <HeroSection/>
-    </div>
-    <div id = 'about'><AboutSection/></div>
-    <div id = 'services'>  <ServicesSection/></div>
-    <div id = 'projects'>  <ProjectsSection/></div>
-    <div id = 'arts'> <ArtsSection/></div>
-    <div id = 'contact'> <ContactSection/></div>
+    </a>
+    <a name = '#about'><AboutSection/></a>
+    <a name = '#services'>  <ServicesSection/></a>
+    <a name = '##projects'>  <ProjectsSection/></a>
+    <a name = '#arts'> <ArtsSection/></a>
+    <a name = '#contact'> <ContactSection/></a>
       
     
     
