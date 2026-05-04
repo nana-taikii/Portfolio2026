@@ -78,10 +78,10 @@ const Header = () => {
             </li>
             {/* <li>
               <a href="#projects">projects</a>
-            </li>
+            </li> */}
             <li>
               <a href="#arts">arts</a>
-            </li> */}
+            </li>
             <li>
               <a href="#contact" className="c-btn-pink">
                 let's talk
