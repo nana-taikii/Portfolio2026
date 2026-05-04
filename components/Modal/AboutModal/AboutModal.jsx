@@ -41,7 +41,7 @@ const Modal = ({ openModal, setOpenModal, content }) => {
         />
         <div className="c-modal__content">
           {renderModalContent()}
-          <img src={FlowerXLImg} class="c-modal__flower" />
+          <img src={FlowerXLImg} className="c-modal__flower" />
         </div>
       </div>
     </div>

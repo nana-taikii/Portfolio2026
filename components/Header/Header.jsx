@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import IconMenu from "../../src/assets/img/icon_menu.svg";
 import IconClose from "../../src/assets/img/icon_close.svg";
 import CurveOrange from "../../src/assets/img/img_curve_orange.svg";
@@ -71,19 +72,19 @@ const Header = () => {
           />
           <ul className="c-header-nav-sp">
             <li>
-              <a href="##about">about me</a>
+              <a href="#about">about me</a>
             </li>
             <li>
-              <a href="##services">services</a>
+              <a href="#services">services</a>
             </li>
             <li>
-              <a href="##projects">projects</a>
+              <a href="#projects">projects</a>
             </li>
             <li>
-              <a href="##arts">arts</a>
+              <a href="#arts">arts</a>
             </li>
             <li>
-              <a href="##contact" className="c-btn-pink">
+              <a href="#contact" className="c-btn-pink">
                 let's talk
               </a>
             </li>

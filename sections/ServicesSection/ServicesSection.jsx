@@ -32,9 +32,9 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="c-services-section">
+    <section id = 'services' className="c-services-section">
         <picture>
-            <source srcset = {ServicesBgSp} media = '(max-width:767px)'/>
+            <source srcSet = {ServicesBgSp} media = '(max-width:767px)'/>
             <img src={ServicesBg} className="c-services-section__img" />
         </picture>
       <div className="c-srvices-section__desc">

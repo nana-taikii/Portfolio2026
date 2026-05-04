@@ -33,6 +33,7 @@ const ProjectsSection = () => {
 
   return (
     <section
+      id = 'projects'
       className={
         webDevTab
           ? "c-projects-section darkMode"

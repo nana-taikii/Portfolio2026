@@ -79,7 +79,7 @@ const UIUXProjects = () => {
       tools: [
         { id: 1, toolName: "Figma" },
         { id: 2, toolName: "Canva" },
-        { id: 2, toolName: "Affinity Designer" },
+        { id: 3, toolName: "Affinity Designer" },
       ],
     },
      {
@@ -90,7 +90,7 @@ const UIUXProjects = () => {
       tools: [
         { id: 1, toolName: "Figma" },
         { id: 2, toolName: "Canva" },
-        { id: 2, toolName: "Affinity Designer" },
+        { id: 3, toolName: "Affinity Designer" },
       ],
     },
      {
@@ -101,7 +101,7 @@ const UIUXProjects = () => {
       tools: [
         { id: 1, toolName: "Figma" },
         { id: 2, toolName: "Canva" },
-        { id: 2, toolName: "Affinity Designer" },
+        { id: 3, toolName: "Affinity Designer" },
       ],
     },
      {
@@ -133,7 +133,7 @@ const UIUXProjects = () => {
       tools: [
         { id: 1, toolName: "Figma" },
         { id: 2, toolName: "Canva" },
-        { id: 2, toolName: "Affinity Designer" },
+        { id: 3, toolName: "Affinity Designer" },
       ],
     },
      {
@@ -144,7 +144,7 @@ const UIUXProjects = () => {
       tools: [
         { id: 1, toolName: "Figma" },
         { id: 2, toolName: "Canva" },
-        { id: 2, toolName: "Affinity Designer" },
+        { id: 3, toolName: "Affinity Designer" },
       ],
     },
   ];

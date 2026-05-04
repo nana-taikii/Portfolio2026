@@ -35,11 +35,11 @@ const [currentIndex, setCurrentIndex] = useState(0);
   };
 
   return (
-    <section  className="c-hero-section">
+    <section  id = 'home' className="c-hero-section">
       
       <div className="c-hero-section__container">
         <picture>
-          <source srcset={HeroImgSp} media="(max-width:1280px)" />
+          <source srcSet={HeroImgSp} media="(max-width:1280px)" />
           <img src={HeroImg} alt="Nana" className="c-hero-section__img" />
         
         </picture>

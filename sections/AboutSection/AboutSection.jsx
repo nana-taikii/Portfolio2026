@@ -124,14 +124,14 @@ const AboutSection = () => {
 
   return (
     <>
-        <section className = 'c-about-section'>
+        <section id = 'about' className = 'c-about-section'>
         <Stars/>
         <div className = 'c-about-section__desc'>
             <h2 className = 'reveal'>About Me</h2>
             <p className = 'reveal'>art became my safe space. I’m happy that my years of growth are crafted with creativity </p>
             <ul>
                 {folder.map((folder) => (
-                    <li className = 'reveal' id = {folder.id} onClick = {() => handleViewFolder(folder.id)}>
+                    <li key = {folder.id} className = 'reveal' id = {folder.id} onClick = {() => handleViewFolder(folder.id)}>
                         <img src={FolderImg} alt={folder.title} />
                         <p>{folder.title}</p>
                     </li>
@@ -141,14 +141,14 @@ const AboutSection = () => {
         <div className =  {openPopup ? 'c-about-section__popup active' : 'c-about-section__popup'} >
             <div className = 'c-about-section__popup__header'  onClick = {() => handleOpenPopup()} >
                 <h3>did you know?</h3>
-                <img src={openPopup ? IconCloseWhite : FlowerImg} alt="close" onClick = {() => handleOpenPopup()} class = {!openPopup ? 'c-flower' : ''} />
+                <img src={openPopup ? IconCloseWhite : FlowerImg} alt="close" onClick = {() => handleOpenPopup()} className = {!openPopup ? 'c-flower' : ''} />
             </div>
 
             <div className =  'c-about-section__popup__skills'>
                 <p>my tech stacks are:</p>
                 <ul>
                     {techStacks.map((stacks) => (
-                        <li id = {stacks.id}>{stacks.tech}</li>
+                        <li key = {stacks.id} id = {stacks.id}>{stacks.tech}</li>
                     ))}
                 </ul>
             </div>
@@ -157,7 +157,7 @@ const AboutSection = () => {
                 <p>tools I used for programming:</p>
                 <ul>
                     {programmingTools.map((tool) => (
-                        <li id = {tool.id}>{tool.programmingTool}</li>
+                        <li key = {tool.id} id = {tool.id}>{tool.programmingTool}</li>
                     ))}
                 </ul>
             </div>
@@ -166,12 +166,12 @@ const AboutSection = () => {
                 <p>tools I used for design:</p>
                 <ul>
                     {designTools.map((tool) => (
-                        <li id = {tool.id}>{tool.designTool}</li>
+                        <li key = {tool.id} id = {tool.id}>{tool.designTool}</li>
                     ))}
                 </ul>
             </div>
 
-            <p class = 'c-about-section__popup__skills__cat'>and I love cats!</p>
+            <p className = 'c-about-section__popup__skills__cat'>and I love cats!</p>
         </div>
         </section>
 
