@@ -191,7 +191,7 @@ const ArtsSection = () => {
             />
           ))}
         </div>
-
+{/* 
         {selected && (
           <div 
             className={`c-arts__modal-bg ${closing ? 'c-arts__modal-bg--closing' : ''}`} 
@@ -231,7 +231,6 @@ const ArtsSection = () => {
 
               <div className="c-arts__modal-info">
                 <p className="c-arts__modal-title">{selected.label}</p>
-                {/* <p className="c-arts__modal-desc">{selected.desc}</p> */}
               </div>
 
               <div className="c-arts__dots">
@@ -276,7 +275,7 @@ const ArtsSection = () => {
               <div className="c-arts__modal-spacer" />
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
