@@ -435,7 +435,7 @@
 .c-arts__flex-container,
 .c-arts__flex-row,
 .c-arts__flex-panel {
-  contain: layout style paint;
+  contain: style paint;
 }
 
 /* Prevent layout shifts */

@@ -61,16 +61,16 @@ const ProjectsSection = () => {
 
                  <div className={`c-projects-section__content ${isTransitioning ? 'fade-out' : ''}`}>
                     {currentTab === 'UI/UX Designs' && (
-                        // <UIUXProjects/>
-                        <p>wawers</p>
+                        <UIUXProjects/>
+                      
                     )}
                     {currentTab === 'Web Dev' && (
-                    //    <WebDevProjects/>
-                    <p>wawers</p>
+                       <WebDevProjects/>
+                  
                     )}
                     {currentTab === 'Graphic Designs' && (
-                        // <GraphicsProjects/>
-                         <p>wawers</p>
+                        <GraphicsProjects/>
+                        
                     )}
                     {/* {currentTab === 'Arts' && (
                         <div>Arts content goes here</div>

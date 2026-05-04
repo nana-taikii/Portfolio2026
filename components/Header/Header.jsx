@@ -36,13 +36,13 @@ const Header = () => {
           <a href="#services">services</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        {/* <li>
+        <li>
           <a href="#projects">projects</a>
           <img src={FlowerImg} className="c-flower" />
-        </li> */}
-        {/* <li>
+        </li>
+        <li>
           <a href="#arts">arts</a><img src={FlowerImg} className="c-flower" />
-        </li> */}
+        </li>
         <li>
           <a href="#contact" className="c-btn-pink">
             let's talk
@@ -70,15 +70,15 @@ const Header = () => {
             onClick={() => handleCloseNavbar()}
           />
           <ul className="c-header-nav-sp">
-            {/* <li>
+            <li>
               <a href="#about">about me</a>
-            </li> */}
+            </li>
             <li>
               <a href="#services">services</a>
             </li>
-            {/* <li>
+            <li>
               <a href="#projects">projects</a>
-            </li> */}
+            </li>
             <li>
               <a href="#arts">arts</a>
             </li>
