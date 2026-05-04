@@ -75,6 +75,7 @@
   justify-content: flex-start;
   width: fit-content;
   gap: 5px;
+  height:fit-content;
 }
 .c-srvices-section__desc ul li {
   display: flex;

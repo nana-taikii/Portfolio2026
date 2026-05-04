@@ -50,7 +50,7 @@ const ServicesSection = () => {
         <ul className = 'reveal'>
           {services.map((service) => (
             <li key={service.id} >
-              {/* <div>
+              <div>
                 <img src={service.icon} alt={service.service} />
                 <p
                   className = 'c-services-section__label'
@@ -65,7 +65,7 @@ const ServicesSection = () => {
                 >
                   {service.service}
                 </p>
-              </div> */}
+              </div>
               <p>{service.description}</p>
             </li>
           ))}
