@@ -1,11 +1,12 @@
 .c-hero-section {
-  height: 100vh;
+   height: 100vh;
   width: 100vw;
   background-color: var(--bg-orange);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative; 
 }
 
 .c-hero-section__container {
@@ -22,6 +23,7 @@
   margin-right: 30px;
   object-position: 100% 10px;
   pointer-events: none;
+
 }
 /* .c-hero-section__container {
   width: 100vw;
@@ -169,6 +171,7 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
+    height:100%;
    
   }
   
@@ -176,6 +179,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
+    position:absolute;
+    top:0px;
   }
   
   .c-hero-section__desc h1 {
@@ -190,10 +195,23 @@
   /* Add this - makes image stick to bottom */
   .c-hero-section__img {
     margin-top: auto;
-    margin-bottom: 0;
+    margin-bottom: 75px;
     width: 100%;
     height: auto;
     display: block;
   
+  
   }
 }
+
+@media screen and (max-width:370px){
+  .c-hero-section__img{
+      margin-top:20px;
+  }
+}
+
+/* @media screen and (max-height:600px){
+   .c-hero-section__img{
+      height:250px;
+  }
+} */

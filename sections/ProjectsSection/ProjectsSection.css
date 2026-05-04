@@ -363,6 +363,12 @@
 .c-modal-content.loaded {
   opacity: 1;
 }
+
+@media screen and (max-width:1300px){
+  .c-projects-content__projects-desc.active{
+    display:none;
+  }
+}
 @media screen and (max-width: 767px) {
   .c-projects-content__wrapper {
     margin-top: 0px;
