@@ -192,7 +192,7 @@ const ArtsSection = () => {
           ))}
         </div>
 
-        {/* {selected && (
+        {selected && (
           <div 
             className={`c-arts__modal-bg ${closing ? 'c-arts__modal-bg--closing' : ''}`} 
             onClick={closeModal}
@@ -275,7 +275,7 @@ const ArtsSection = () => {
               <div className="c-arts__modal-spacer" />
             </div>
           </div>
-        )} */}
+        )}
       </div>
     </section>
   );
