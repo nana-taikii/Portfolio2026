@@ -10,14 +10,14 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
 
       <AboutSection />
-      <ServicesSection />
+      <ServicesSection /> */}
       <ProjectsSection />
         <ArtsSection />
     
-      <ContactSection /> 
+      {/* <ContactSection />  */}
     </>
   );
 };
