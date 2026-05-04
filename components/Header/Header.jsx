@@ -10,13 +10,13 @@ const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
   const [currentSection, setCurrentSection] = useState(null);
   
-  const handleNavClick = (e, sectionId) => {
-    e.preventDefault();
-    setToggleOverlay(false);
-    setTimeout(() => {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-    }, 300);
-  };
+   const handleNavClick = (e, sectionId) => {
+  e.preventDefault();
+  setToggleOverlay(false);
+  setTimeout(() => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  }, 300); // matches your 0.3s CSS transition
+};
 
   const handleToggleNavBar = () => {
     setToggleOverlay(!toggleOverlay);
@@ -29,38 +29,25 @@ const Header = () => {
   return (
     <header>
       <ul className="c-header">
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#about";
-        }}>
+        <li  onClick={(e) => {
+      e.preventDefault();
+      window.location.href = "#about";
+    }}>
           <a href="#about">about me</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#services";
-        }}>
+        <li>
           <a href="#services">services</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#projects";
-        }}>
+        <li>
           <a href="#projects">projects</a>
           <img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#arts";
-        }}>
-          <a href="#arts">arts</a>
-          <img src={FlowerImg} className="c-flower" />
+        <li>
+          <a href="#arts">arts</a><img src={FlowerImg} className="c-flower" />
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "#contact";
-        }}>
+        <li>
           <a href="#contact" className="c-btn-pink">
             let's talk
           </a>
@@ -87,39 +74,19 @@ const Header = () => {
             onClick={() => handleCloseNavbar()}
           />
           <ul className="c-header-nav-sp">
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#about";
-              handleCloseNavbar();
-            }}>
+            <li>
               <a href="#about">about me</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#services";
-              handleCloseNavbar();
-            }}>
+            <li>
               <a href="#services">services</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#projects";
-              handleCloseNavbar();
-            }}>
+            <li>
               <a href="#projects">projects</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#arts";
-              handleCloseNavbar();
-            }}>
+            <li>
               <a href="#arts">arts</a>
             </li>
-            <li onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#contact";
-              handleCloseNavbar();
-            }}>
+            <li>
               <a href="#contact" className="c-btn-pink">
                 let's talk
               </a>
