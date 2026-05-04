@@ -65,7 +65,7 @@
 }
 .c-srvices-section__desc ul li {
   width:100%;
-  min-height:152px;
+ 
   height:auto;
 }
 .c-srvices-section__desc ul li div {
@@ -75,8 +75,8 @@
   justify-content: flex-start;
   width: fit-content;
   gap: 5px;
-  height:auto;
-  min-height:55px;
+ 
+ 
 }
 .c-srvices-section__desc ul li {
   display: flex;

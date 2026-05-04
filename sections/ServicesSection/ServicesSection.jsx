@@ -52,7 +52,7 @@ const ServicesSection = () => {
             <li key={service.id} >
               <div>
                 <img src={service.icon} alt={service.service} />
-                <p
+                {/* <p
                   className = 'c-services-section__label'
                   style={{
                     color:
@@ -64,7 +64,7 @@ const ServicesSection = () => {
                   }}
                 >
                   {service.service}
-                </p>
+                </p> */}
               </div>
               <p>{service.description}</p>
             </li>
