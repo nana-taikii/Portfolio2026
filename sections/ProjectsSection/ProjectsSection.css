@@ -247,13 +247,12 @@
 }
 
 /*UIUX PROJECTS*/
+/* UIUX PROJECTS */
 .c-projects-content__wrapper {
   width: 100%;
   margin-top: 40px;
   position: relative;
-  /* Use contain-intrinsic-size to hint at content height */
-  content-visibility: auto;
-  contain-intrinsic-size: 1000px;
+  /* REMOVED content-visibility and contain-intrinsic-size */
 }
 
 .c-projects-content__wrapper .c-projects-content__wrapper__ul {
@@ -264,9 +263,26 @@
   gap: 40px;
   position: relative;
   z-index: 1;
-  /* Allow natural height */
   height: auto;
   min-height: auto;
+}
+@media screen and (max-width: 767px) {
+  .c-projects-content__wrapper {
+    min-height: calc(100vh - 200px);
+    /* Ensure modals can break out */
+    overflow: visible !important;
+  }
+  
+  .c-projects-content__wrapper .c-projects-content__wrapper__ul {
+    gap: 20px;
+  }
+}
+
+/* Desktop - no fixed height needed */
+@media screen and (min-width: 768px) {
+  .c-projects-content__wrapper {
+    min-height: auto;
+  }
 }
 .c-projects-content__wrapper .c-projects-content__wrapper__ul li {
   width: 100%;
