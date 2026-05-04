@@ -35,7 +35,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
   };
 
   return (
-    <section id = 'home' className="c-hero-section">
+    <section  className="c-hero-section">
       
       <div className="c-hero-section__container">
         <picture>

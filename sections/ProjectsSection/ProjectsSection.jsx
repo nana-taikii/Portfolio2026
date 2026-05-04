@@ -32,7 +32,7 @@ const ProjectsSection = () => {
     };
 
     return (
-        <div id = 'projects'>
+      
               <section className= {webDevTab   ? 'c-projects-section darkMode' : graphicsTab ? 'c-projects-section orangeMode' : 'c-projects-section'}>
             <img src={CloudImg2} className = 'c-cloud2 cloud-slow'/>
             <div className='c-projects-section__wrapper'>
@@ -79,7 +79,7 @@ const ProjectsSection = () => {
                 </div>
             </div>
         </section>
-        </div>
+       
       
     )
 }

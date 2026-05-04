@@ -11,13 +11,20 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
-      <HeroSection/>
-      <AboutSection/>
-      <ServicesSection/>
-      <ProjectsSection/>
-      <ArtsSection/>
-      <ArtsSection/> 
-      <ContactSection/>
+    <div id = 'home'>
+        <HeroSection/>
+    </div>
+    <div id = 'about'><AboutSection/></div>
+    <div id = 'services'>  <ServicesSection/></div>
+    <div id = 'projects'>  <ProjectsSection/></div>
+    <div id = 'arts'> <ArtsSection/></div>
+    <div id = 'contact'> <ContactSection/></div>
+      
+    
+    
+     
+     
+     
       
     </>
   );

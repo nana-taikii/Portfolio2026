@@ -124,7 +124,7 @@ const AboutSection = () => {
 
   return (
     <>
-        <section id = 'about' className = 'c-about-section'>
+        <section className = 'c-about-section'>
         <Stars/>
         <div className = 'c-about-section__desc'>
             <h2 className = 'reveal'>About Me</h2>
