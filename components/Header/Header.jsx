@@ -9,13 +9,24 @@ const Header = () => {
   const [toggleOverlay, setToggleOverlay] = useState(false);
 
   const handleNavClick = (e, sectionId) => {
-    e.preventDefault();
+  e.preventDefault();
+  setToggleOverlay(false);
+
+  const scroll = () => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const top = section.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top, behavior: "smooth" });
     }
-    setToggleOverlay(false);
   };
+
+  // If page fully loaded, scroll immediately. Otherwise wait.
+  if (document.readyState === "complete") {
+    setTimeout(scroll, 100);
+  } else {
+    window.addEventListener("load", scroll, { once: true });
+  }
+};
 
   return (
     <header>
