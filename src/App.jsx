@@ -26,6 +26,8 @@ function App() {
     refreshRevealAnimation();
   }, [location]);
 
+
+   
   return (
     <>
       <Routes>
