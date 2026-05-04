@@ -250,6 +250,8 @@
 .c-projects-content__wrapper {
   width: 100%;
   margin-top: 40px;
+  position:relative;
+  height:100%;
 }
 .c-projects-content__wrapper .c-projects-content__wrapper__ul {
   display: flex;
@@ -267,7 +269,7 @@
   width: 100%;
   position: relative;
   user-select: none;
-  height:100%;
+  
 }
 .c-projects-content__projects-desc {
   width: 100%;
