@@ -257,8 +257,8 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  height:auto;
-  overflow: visible !important;
+  min-height:100vh;
+  /* overflow: visible !important; */
   position: relative;
   z-index: 1;
 }
