@@ -11,7 +11,8 @@ import './ContactSection.css'
 
 const ContactSection = () => {
   return (
-    <section id = 'contact' className = 'c-contact-section'>
+    <div id = 'contact'>
+         <section className = 'c-contact-section'>
       <img src={CloudBorder} className = 'c-cloud-border' />
       <div className = 'c-contact-section__desc'>
         <img src={CatBorgir} alt="CatBorgir" className = 'c-cat-borgir waffle-float' />
@@ -50,6 +51,8 @@ const ContactSection = () => {
         </nav>
       </div>
     </section>
+    </div>
+   
   )
 }
 
