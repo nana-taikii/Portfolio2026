@@ -39,7 +39,7 @@ const ProjectsSection = () => {
                     <h2 className = 'reveal'>My Projects</h2>
                     <p className = 'reveal'>Here are my projects as a designer, artist and developer.</p>
                 </hgroup>
-                <div class = 'c-projects-section__nav-wrapper'>
+                <div className = 'c-projects-section__nav-wrapper'>
                          <nav>
                     {tabs.map((tab) => (
                         <button 

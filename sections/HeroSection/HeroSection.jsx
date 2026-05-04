@@ -35,12 +35,12 @@ const [currentIndex, setCurrentIndex] = useState(0);
   };
 
   return (
-    <section id = 'home' class="c-hero-section">
+    <section id = 'home' className="c-hero-section">
       
-      <div class="c-hero-section__container">
+      <div className="c-hero-section__container">
         <picture>
           <source srcset={HeroImgSp} media="(max-width:1280px)" />
-          <img src={HeroImg} alt="Nana" class="c-hero-section__img" />
+          <img src={HeroImg} alt="Nana" className="c-hero-section__img" />
         
         </picture>
          {/* <div className="c-slides-container">
@@ -66,15 +66,15 @@ const [currentIndex, setCurrentIndex] = useState(0);
             </picture>
           ))}
         </div> */}
-        <div class="c-hero-section__desc">
+        <div className="c-hero-section__desc">
           <h1 className = 'reveal'>hi,im donna</h1>
           <p className = 'reveal'>
             i’m an artist, UI/UX designer and a web developer. I enjoy blending
             creativity with functionality.
           </p>
-          <a href="#projects" class="c-btn-brown">
+          <a href="#projects" className="c-btn-brown">
             <span>see my work</span>
-            <img src={FlowImg} alt="flower" class="c-flower" />
+            <img src={FlowImg} alt="flower" className="c-flower" />
           </a>
         </div>
       </div>

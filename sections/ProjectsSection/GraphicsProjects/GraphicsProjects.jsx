@@ -87,7 +87,7 @@ const GraphicsProjects = () => {
         <div className = 'c-projects-content__graphic'>
             <img src={GraphicsProj1} alt="Takoyaki" />
             <div className = 'c-projects-content__stickers'>
-                <img src={CloudImg} alt="Cloud" class = 'c-stickers__cloud cloud-slow'/>
+                <img src={CloudImg} alt="Cloud" className = 'c-stickers__cloud cloud-slow'/>
                 <h2>02 Stickers</h2>
                 <ul>
                     {stickers.map((sticker) => (
