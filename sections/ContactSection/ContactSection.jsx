@@ -11,7 +11,7 @@ import "./ContactSection.css";
 
 const ContactSection = () => {
   return (
-    <section id="contact">
+    <div id="contact">
       <div className="c-contact-section">
         <img src={CloudBorder} className="c-cloud-border" />
         <div className="c-contact-section__desc">
@@ -67,7 +67,7 @@ const ContactSection = () => {
           </nav>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
