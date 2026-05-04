@@ -257,7 +257,10 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  height:100%;
+  height:auto;
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
 }
 .c-projects-content__wrapper .c-projects-content__wrapper__ul li {
   width: 100%;
