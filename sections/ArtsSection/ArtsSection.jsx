@@ -97,6 +97,29 @@ const Row = React.memo(({ row, panels, onPanelClick }) => (
   </div>
 ));
 
+
+// In ProjectModal component and ArtsSection modal
+useEffect(() => {
+  if (openModal || selected) {
+    // Prevent scrolling on body when modal is open
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+  } else {
+    // Restore scrolling when modal closes
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+  }
+  
+  return () => {
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+  };
+}, [openModal, selected]);
+
+
 const ArtsSection = () => {
   const [selected, setSelected] = useState(null);
   const [current, setCurrent] = useState(0);

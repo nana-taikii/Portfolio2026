@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const ProjectModal = lazy(() => import("../../../components/ProjectModal/ProjectModal"));
 import UIUXProject1 from "../../../src/assets/img/img_uiux_project1.webp";
 import UIUXProject2 from "../../../src/assets/img/img_uiux_project2.webp";
 import UIUXProject3 from "../../../src/assets/img/img_uiux_project3.webp";
@@ -149,7 +150,7 @@ const UIUXProjects = () => {
     },
   ];
 
-
+ 
   return (
     <div className='c-projects-content__wrapper'>
       <ul className='c-projects-content__wrapper__ul'>
@@ -180,12 +181,14 @@ const UIUXProjects = () => {
         ))}
       </ul>
 
-      <ProjectModal
-        key={selectedProject?.id || "modal"}
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-        content={<UIUXProjectsContent project = {selectedProject}/>}
-        />
+     {openModal && (
+  <ProjectModal
+    key={selectedProject?.id || "modal"}
+    openModal={openModal}
+    setOpenModal={setOpenModal}
+    content={<UIUXProjectsContent project={selectedProject} />}
+  />
+)}
     </div>
   );
 };
