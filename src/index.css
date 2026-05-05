@@ -112,7 +112,7 @@ main{
 SCROLLBAR
 =============================================*/
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 15px;
   height: 10px;
 }
 
