@@ -144,7 +144,14 @@
     min-height: 580px;
   }
 }
-
+@media screen and (max-width:800px){
+   .c-cat-borgir {
+    width:400px;
+    right:0px;
+    top:240px;
+   
+  }
+}
 @media screen and (max-width: 767px) {
   .c-contact-section {
     padding: 80px 0px 0px 0px;
@@ -194,6 +201,9 @@
   .c-contact-setion__social-media {
     padding: 7px 15px;
     gap: 14px;
+  }
+  .c-contact-section__details > div{
+    gap:7px;
   }
   
   

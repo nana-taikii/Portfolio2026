@@ -8,6 +8,7 @@ import UIUXProject6 from "../../../src/assets/img/img_uiux_project6.webp";
 import UIUXProject7 from "../../../src/assets/img/img_uiux_project7.webp";
 import UIUXProject8 from "../../../src/assets/img/img_uiux_project8.webp";
 import UIUXProject9 from "../../../src/assets/img/img_uiux_project9.webp";
+import UIUXProject10 from "../../../src/assets/img/img_tendernest_banner.webp";
 import ProjectModal from "../../../components/ProjectModal/ProjectModal";
 
 
@@ -20,6 +21,7 @@ import UIUXProject6Overview from "../../../src/assets/img/img_uiux_project6_over
 import UIUXProject7Overview from "../../../src/assets/img/img_uiux_project7_overview.webp"
 import UIUXProject8Overview from "../../../src/assets/img/img_uiux_project8_overview.png"
 import UIUXProject9Overview from "../../../src/assets/img/img_uiux_project9_overview.webp"
+import UIUXProject10Overview from "../../../src/assets/img/img_tendernest_overview.webp"
 
 
 const UIUXProjectsContent = ({ project }) => {
@@ -51,6 +53,17 @@ const UIUXProjects = () => {
   const [selectedProject, setSelectedProject] = useState()
 
   const UIUXProjects = [
+     {
+      id: "Project10",
+      title: "Tender Nest",
+      img: UIUXProject10,
+      overview:UIUXProject10Overview,
+      tools: [
+        { id: 1, toolName: "Figma" },
+        { id: 2, toolName: "Affinity Designer" },
+        { id: 3, toolName: "Canva" },
+      ],
+    },
     {
       id: "Project1",
       title: "Mood App",
